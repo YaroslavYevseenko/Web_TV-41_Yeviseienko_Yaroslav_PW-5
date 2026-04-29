@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моніторинг ТЕЦ</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Моніторинг малої ТЕЦ</h1>
+        <p>Когенераційна установка на природному газі</p>
+    </header>
+
+    <main class="dashboard">
+        <section class="kpi-grid">
+            <div class="kpi-card">
+                <span>Електрична потужність</span>
+                <strong id="electric-power">—</strong>
+            </div>
+
+            <div class="kpi-card">
+                <span>Теплова потужність</span>
+                <strong id="thermal-power">—</strong>
+            </div>
+
+            <div class="kpi-card">
+                <span>Витрата газу</span>
+                <strong id="gas-consumption">—</strong>
+            </div>
+
+            <div class="kpi-card">
+                <span>Температура теплоносія</span>
+                <strong id="coolant-temperature">—</strong>
+            </div>
+
+            <div class="kpi-card">
+                <span>Електричний ККД</span>
+                <strong id="electric-efficiency">—</strong>
+            </div>
+
+            <div class="kpi-card">
+                <span>Тепловий ККД</span>
+                <strong id="thermal-efficiency">—</strong>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Sankey-діаграма потоків енергії</h2>
+            <div id="sankey-chart"></div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="panel">
+                <h2>Електрична потужність</h2>
+                <canvas id="electric-chart"></canvas>
+            </div>
+
+            <div class="panel">
+                <h2>Теплова потужність</h2>
+                <canvas id="thermal-chart"></canvas>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Таблиця параметрів</h2>
+            <table>
+                <tbody id="params-table"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+</html>

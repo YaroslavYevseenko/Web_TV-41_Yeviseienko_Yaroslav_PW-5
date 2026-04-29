@@ -1,0 +1,18 @@
+{
+  "name": "tec-monitoring",
+  "version": "1.0.0",
+  "description": "Frontend для моніторингу малої ТЕЦ у реальному часі",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=./",
+    "dev": "npx live-server --port=3000 --open=./"
+  },
+  "keywords": [
+    "energy",
+    "tec",
+    "monitoring",
+    "dashboard"
+  ],
+  "author": "",
+  "license": "ISC"
+}
